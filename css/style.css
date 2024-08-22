@@ -1,0 +1,160 @@
+
+
+.body{
+    background-color: rgb(244, 209, 241);
+}
+
+
+
+h1{
+    font-family: fantasy;
+    font-size: 40px;
+    font-weight: 100;
+    color: rgb(212, 153, 193)
+   }
+
+h1{
+    display: grid;
+    place-items: center; /* Centra el contenido tanto vertical como horizontalmente */
+    height: 10vh;   
+}
+
+
+h2{
+    color: rgb(111, 31, 111);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+}
+
+
+h3{
+    color: rgb(45, 13, 60);
+    font-style: oblique;
+    font-size: 16px;
+    border:1px solid salmon;
+    margin:auto;
+    padding: 0p 1em 0px 1em;
+}
+
+
+.logo-image {
+    width: 80px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    display: block; /* Elimina el espacio en línea debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen en su contenedor */
+}
+
+.product {
+    font-family: fantasy;
+    font-size: small;
+    border:1px;
+    padding: auto;
+    font-style: oblique;
+    }
+
+/* Estilos específicos para pantallas grandes */
+@media (min-width: 601px) {
+    header nav ul {
+        justify-content: flex-end;
+    }
+    
+.container {
+        padding-top: 1em;
+        padding-right: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em;
+    }
+    
+.container {
+    background-image: url("../img/fondo\ si.jpeg");
+}
+}
+
+.title {
+    background-image: url("../img/fondo\ si.jpeg");
+}
+
+.li{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.li{
+border: 1px solid rgb(11, 9, 11);
+    padding: 1em;
+}
+
+.card{
+    background-color: rgb(108, 39, 80);
+    color: white;
+    padding: 1em;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+.card-title{
+    font-size: 25px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.card-description{
+    font-size: 18px;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.cards-container{
+    display: grid;
+    gap: 1em;
+}
+
+/* Estilos específicos para pantallas grandes */
+@media(min-width: 720px){
+    .cards-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .title-cards-container{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .menu li {
+        margin: 0;
+    }
+    
+    .menu a {
+        display: block;
+        padding: 14px 20px;
+        color: rgb(80, 9, 61);
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    
+    /* Efecto hover */
+    .menu a:hover {
+        background-color: #370337;
+    }
+
+    .animated-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #3d022d;
+        background-color: #b6165b;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+        transition: transform 0.5s ease;
+    }
+
+    .animated-button:hover {
+        transform: translateX(20px);
+    }
