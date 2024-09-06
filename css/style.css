@@ -35,11 +35,12 @@ h3{
 
 
 .logo-image {
-    width: 80px; /* Ajusta el tamaño de la imagen */
+    width: 35%; /* Ajusta el tamaño de la imagen */
     height: auto; /* Mantiene la relación de aspecto de la imagen */
     display: block; /* Elimina el espacio en línea debajo de la imagen */
     margin: 0 auto; /* Centra la imagen en su contenedor */
 }
+
 
 .product {
     font-family: fantasy;
@@ -54,6 +55,7 @@ h3{
     header nav ul {
         justify-content: flex-end;
     }
+}
     
 .container {
         padding-top: 1em;
@@ -65,7 +67,7 @@ h3{
 .container {
     background-image: url("../img/fondo\ si.jpeg");
 }
-}
+
 
 .title {
     background-image: url("../img/fondo\ si.jpeg");
@@ -106,10 +108,11 @@ border: 1px solid rgb(11, 9, 11);
 }
 
 /* Estilos específicos para pantallas grandes */
-@media(min-width: 720px){
-    .cards-container{
+@media (min-width: 720px) {
+    .cards-container {
         grid-template-columns: 1fr 1fr;
     }
+}
     .title-cards-container{
         grid-column-start: 1;
         grid-column-end: 3;
@@ -144,7 +147,7 @@ border: 1px solid rgb(11, 9, 11);
         padding: 10px 20px;
         font-size: 16px;
         color: #3d022d;
-        background-color: #b6165b;
+        background-color: #d879a2;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -155,3 +158,4 @@ border: 1px solid rgb(11, 9, 11);
     .animated-button:hover {
         transform: translateX(20px);
     }
+

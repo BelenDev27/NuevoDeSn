@@ -1,14 +1,26 @@
-let nombre;
-let edad;
-let ListaNombreDeAlumnos
+let minombre;
 
-let numero=31;
-let res = (numero+10) * 2;
-console.log(res);
+minombre = "MelEmi"
 
-function calcularAreaCirculo(radio) {
-    if (radio < 0)}
-const radio = 5;
-const area = calcularAreaCirculo(radio);
-console.log
+function mayorDeCuatro(a, b, c, d) {
+    return Math.max(a, b, c, d);
+}
 
+console.log(mayorDeCuatro(3, 7, 2, 8));
+
+function menorDeTres(a, b, c) {
+    return Math.min(a, b, c);
+}
+
+console.log(menorDeTres(5, 1, 8));
+
+function esParOImpar(n) {
+    if (n % 2 === 0) {
+        return "Par";
+    } else {
+        return "Impar";
+    }
+}
+
+console.log(esParOImpar(4)); 
+console.log(esParOImpar(7)); 
