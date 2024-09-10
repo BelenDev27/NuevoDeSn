@@ -1,26 +1,38 @@
-let minombre;
+function moveSlide(step, carouselId) {
+    const carousel = document.getElementById(carouselId);
+    const items = carousel.querySelector('.carousel-items');
+    const totalItems = carousel.querySelectorAll('.carousel-items .card').length;
 
-minombre = "MelEmi"
 
-function mayorDeCuatro(a, b, c, d) {
-    return Math.max(a, b, c, d);
+    let currentIndex = parseInt(items.getAttribute('data-current-index')) || 0;
+
+    currentIndex = (currentIndex + step + totalItems) % totalItems;
+
+    
+    items.setAttribute('data-current-index', currentIndex);
+
+
+    const offset = -currentIndex * 100;
+    items.style.transform = `translateX(${offset}%)`;
 }
 
-console.log(mayorDeCuatro(3, 7, 2, 8));
 
-function menorDeTres(a, b, c) {
-    return Math.min(a, b, c);
-}
+document.querySelectorAll('.carousel').forEach(carousel => {
+    const items = carousel.querySelector('.carousel-items');
+    
+   
+    items.setAttribute('data-current-index', '0');
 
-console.log(menorDeTres(5, 1, 8));
+   
+    const prevButton = carousel.querySelector('.prev');
+    const nextButton = carousel.querySelector('.next');
 
-function esParOImpar(n) {
-    if (n % 2 === 0) {
-        return "Par";
-    } else {
-        return "Impar";
+    
+    if (prevButton) {
+        prevButton.addEventListener('click', () => moveSlide(-1, carousel.id));
     }
-}
-
-console.log(esParOImpar(4)); 
-console.log(esParOImpar(7)); 
+    
+    if (nextButton) {
+        nextButton.addEventListener('click', () => moveSlide(1, carousel.id));
+    }
+});
